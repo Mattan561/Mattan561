@@ -1,0 +1,119 @@
+.players {
+  /*display: flex; /* Display divs horizontally */
+  justify-content: space-between; /* Distribute space evenly between items */
+
+}
+
+.player {
+  display: flex;
+  width: auto; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  background-color: #5a131b; /* Optional background color */
+  margin: 0px 1% 1% 1%; /* Optional margin for additional spacing */
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.nameandtotal {
+margin: 1%;
+  width: 25%;
+  
+}
+.playername{
+  margin: 0px 0px 2.5% 0px;
+  font-size: 3.5vw;
+  background-color: #8e2b21;
+  height: 65%;
+  
+}
+.total{
+  font-size: 3vw;
+  background-color: #cc5728;
+  height: 27.75%;
+}
+.header{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  width:100%;
+  display:inline-block;
+  margin: 0px 0px 1% 0px;
+  background-color: #ff9837;
+  text-align: center;
+  
+}
+.sidebar{
+  width:2%;
+  position:absolute;
+  top:0;
+  left:0;
+  font-size: 1vw;
+}
+body{
+  margin: 0px
+}
+.roundnumber{
+  display: inline-block;
+  margin: 0px 0px 1% 0px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  font-weight: 500;
+  background-color: #ffec3c;
+  text-align: center;
+  width: 100%;
+  position: relative
+}
+.leftarrow{
+  font-size: 2vw;
+  font-family:Arial, Helvetica, sans-serif;
+  float: none;
+  margin-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.rightarrow{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  float: none;
+  margin-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.input{
+  font-family:Arial, Helvetica, sans-serif;
+  display: grid;
+  font-size: 2.5vw;
+border-left: 5px solid #ffec3c;
+justify-items: start;
+width: 100%;
+grid-template-rows: 1fr 1fr 1fr;
+padding-left: 25%;
+}
+.score{
+  font-size: 3vw;
+
+}
+.bidall{
+grid-row: 1;
+display:flex;
+}
+.bidhardcode{
+  margin-right: 15%;
+}
+.gotall{
+grid-row:2;
+display:flex;
+}
+.gothardcode{
+  margin-right: 15%;
+}
+
+.color1 {color: #5a131b;}
+.color2 {color: #8e2b21;}
+.color3 {color: #cc5728;}
+.color4 {color: #ff9837;}
+.color5 {color: #ffec3c;}
