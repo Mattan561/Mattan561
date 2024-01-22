@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh Hell Scorekeeper</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+   
     <div class="everything">
-        <button class="sidebar">hamburger sidebar</button>
-        
-        
-        <h1 class="header">OH HELL</h1>
-        <div class="roundnumber" >
+     
+    <div class="header">
+        <button id="sidebarbutton"><i id="sidebaricon" class="fa fa-bars"></i></button>
+        <h1 class="title">OH HELL</h1>
+        </div>
+        <div class="round" >
             <button class="leftarrow">left arrow</button>
-            Round X
+            <div id="roundhardcode">Round</div> 
+            <div id="roundnumber">1</div>
             <button class="rightarrow">right arrow</button>
         </div>
         <div class="players">
             <div class="player">
                 <div class="nameandtotal">
-                    <div class="playername">
-                        player one
-                    </div>
+                    <input id="playername1" type="text" value="">
                     <div class="total">
                         total: X
                     </div>
@@ -33,21 +36,22 @@
                         <div class="bidhardcode">
                             Bid:
                         </div>
-                        <div class="bidinput">
-                            X
-                        </div>
+                        <input id="bidinput1" type="text" value="">
                     </div>
                     <div class="gotall">
                         <div class="gothardcode">
                             Got:
                         </div>
-                        <div class="gotinput">
-                            X
+                        <input id="gotinput1" type="text" value="">
+                    </div>
+                    <div class="scoreall">
+                        <div class="score">
+                            Score: 
                         </div>
-                    </div>
-                    <div class="score">
-                        score: X
-                    </div>
+                        <div id="scorenumber1">
+                            -
+                            </div>
+                        </div>
                 </div>
                 <!-- bid, got, score, -->
             </div>
@@ -56,9 +60,7 @@
             
             <div class="player">
                 <div class="nameandtotal">
-                    <div class="playername">
-                        player two
-                    </div>
+                    <input id="playername2" type="text" value="">
                     <div class="total">
                         total: X
                     </div>
@@ -67,22 +69,23 @@
                 <div class="input">
                     <div class="bidall">
                         <div class="bidhardcode">
-                            Bid: 
+                            Bid:
                         </div>
-                        <div class="bidinput">
-                            X
-                        </div>
+                        <input id="bidinput2" type="text" value="">
                     </div>
                     <div class="gotall">
                         <div class="gothardcode">
-                            Got: 
+                            Got:
                         </div>
-                        <div class="gotinput">
-                            X
-                        </div>
+                        <input id="gotinput2" type="text" value="">
                     </div>
+                    <div class="scoreall">
                     <div class="score">
-                        score: X
+                        Score: 
+                    </div>
+                    <div id="scorenumber2">
+                        -
+                        </div>
                     </div>
                 </div>
                 <!-- bid, got, score, -->
@@ -91,5 +94,6 @@
             
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

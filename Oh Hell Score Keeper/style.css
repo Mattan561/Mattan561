@@ -1,3 +1,4 @@
+
 .players {
   /*display: flex; /* Display divs horizontally */
   justify-content: space-between; /* Distribute space evenly between items */
@@ -10,61 +11,98 @@
   height: auto; /* Adjust height as needed */
   background-color: #5a131b; /* Optional background color */
   margin: 0px 1% 1% 1%; /* Optional margin for additional spacing */
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px; /* Add rounded edges */
 }
 
 .nameandtotal {
-margin: 1%;
+  margin: 1%;
   width: 25%;
-  
 }
-.playername{
+
+#playername1 {
   margin: 0px 0px 2.5% 0px;
   font-size: 3.5vw;
   background-color: #8e2b21;
-  height: 65%;
-  
+  height: 58%;
+  border: 0px;
+  width: 99%;
 }
-.total{
+#playername2 {
+  margin: 0px 0px 2.5% 0px;
+  font-size: 3.5vw;
+  background-color: #8e2b21;
+  height: 58%;
+  border: 0px;
+  width: 99%;
+}
+
+.total {
   font-size: 3vw;
   background-color: #cc5728;
-  height: 27.75%;
+  height: 34.75%;
+  width: 100%;
+  align-self: center;
 }
-.header{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 5vw;
   font-weight: 700;
-  width:100%;
-  display:inline-block;
-  margin: 0px 0px 1% 0px;
-  background-color: #ff9837;
+  width: 100%;
+  display: inline-block;
   text-align: center;
-  
+  position: relative;
+  margin: 0px;
 }
-.sidebar{
-  width:2%;
-  position:absolute;
-  top:0;
-  left:0;
-  font-size: 1vw;
+
+
+
+
+
+
+#sidebarbutton {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 2vw;
+  margin-left: 2%;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
-body{
-  margin: 0px
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff9837;
+  margin: 0px 0px 1% 0px;
+  flex-shrink: 0; /* Prevent shrinking based on content */
+  height: 50%; /* Adjust the height as needed */
 }
-.roundnumber{
+
+body {
+  margin: 0px;
+}
+
+.round {
   display: inline-block;
   margin: 0px 0px 1% 0px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3vw;
   font-weight: 500;
   background-color: #ffec3c;
   text-align: center;
   width: 100%;
-  position: relative
+  position: relative;
 }
-.leftarrow{
+
+.leftarrow {
   font-size: 2vw;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   float: none;
   margin-left: 0;
   position: absolute;
@@ -72,8 +110,9 @@ body{
   left: 0;
   height: 100%;
 }
-.rightarrow{
-  font-family:Arial, Helvetica, sans-serif;
+
+.rightarrow {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 2vw;
   float: none;
   margin-right: 0;
@@ -83,16 +122,18 @@ body{
   height: 100%;
 }
 
-.input{
-  font-family:Arial, Helvetica, sans-serif;
+.input {
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   font-size: 2.5vw;
-border-left: 5px solid #ffec3c;
-justify-items: start;
-width: 100%;
-grid-template-rows: 1fr 1fr 1fr;
-padding-left: 25%;
+  border-left: 5px solid #ffec3c;
+  justify-items: start;
+  width: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-left: 25%;
 }
+
+
 .score{
   font-size: 3vw;
 
@@ -102,14 +143,64 @@ grid-row: 1;
 display:flex;
 }
 .bidhardcode{
-  margin-right: 15%;
+  margin-right: auto; /* Add this line */
+  align-self: center; /* Center vertically */
+  width: 50%;
 }
+
+
 .gotall{
 grid-row:2;
 display:flex;
 }
 .gothardcode{
-  margin-right: 15%;
+  margin-right: auto; /* Add this line */
+  align-self: center; /* Center vertically */
+  width: 25%;
+}
+#bidinput1{
+  background: none;
+  border: 0px;
+  font-size: 2.5vw;
+  margin-left: 5%;
+}
+#gotinput1{
+  background: none;
+  border: 0px;
+  font-size: 2.5vw;
+  margin-left: 4%;
+}
+#bidinput2{
+  background: none;
+  border: 0px;
+  font-size: 2.5vw;
+  margin-left: 5%;
+}
+#gotinput2{
+  background: none;
+  border: 0px;
+  font-size: 2.5vw;
+  margin-left: 4%;
+}
+
+.scoreall{
+  background: none;
+  border: 0px;
+  font-size: 3vw;
+  grid-row: 3;
+  display:flex;
+  align-self: center; 
+}
+#scorenumber2{
+  margin-left: 20%;
+}
+#scorenumber1{
+  margin-left: 20%;
+}
+
+#roundhardcode,
+#roundnumber {
+  display: inline;
 }
 
 .color1 {color: #5a131b;}
@@ -117,3 +208,11 @@ display:flex;
 .color3 {color: #cc5728;}
 .color4 {color: #ff9837;}
 .color5 {color: #ffec3c;}
+
+
+.color1 {color: #06131d;}
+.color2 {color: #374155;}
+.color3 {color: #124c5e;}
+.color4 {color: #597e85;}
+.color5 {color: #a5b3b7;}
+
