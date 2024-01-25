@@ -37,12 +37,37 @@
   width: 99%;
 }
 
-.total {
+.totalhardcode {
+  align-self: center;
+  display: flex;
+}
+
+#totalnumber1 {
+  display: flex;
+  align-self: center;
+  margin-left: 10%;
+}
+
+#totalnumber2 {
+  display: flex;
+  align-self: center;
+  margin-left: 10%;
+}
+
+#totalall1{
   font-size: 3vw;
   background-color: #cc5728;
   height: 34.75%;
   width: 100%;
-  align-self: center;
+  display: flex;
+}
+
+#totalall2{
+  font-size: 3vw;
+  background-color: #cc5728;
+  height: 34.75%;
+  width: 100%;
+  display: flex;
 }
 
 .title {
