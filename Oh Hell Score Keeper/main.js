@@ -11,6 +11,7 @@ function getScore1(bid1, got1) {
   return score1;
 }
 
+var numberOfPlayers = 2;
 var numberOfRounds = 20;
 let roundInputs1 = [];
 
@@ -111,13 +112,114 @@ document.addEventListener('DOMContentLoaded', initializeButtons);
 
 function updateName() {
   var name1 = document.querySelector('#nameinput1').value;
-  var name2 = document.querySelector('#nameinput2').value;
   document.querySelector('#playername1').textContent = name1;
-  document.querySelector('#playername2').textContent = name2;
 } 
 function initializePlayerName() {
   document.querySelector('#playername1').addEventListener('blur', updateName);
-  document.querySelector('#playername2').addEventListener('blur', updateName);
 }
 
 document.addEventListener('DOMContentLoaded', initializePlayerName);
+
+
+function addPlayer() {
+  if (numberOfPlayers < 12) {
+    addPlayer(++numberOfPlayers);
+  }
+}
+
+function removePlayer(){
+  var playersContainer = document.querySelector('#playerscontainer');
+  var players = document.querySelectorAll('.player');
+  var lastPlayer = players[players.length - 1];
+  playersContainer.removeChild(lastPlayer);
+}
+
+function addPlayer(playerNumber) {
+  var playerscontainer = document.querySelector('#playerscontainer');
+  var player = document.createElement('div');
+  player.classList.add('player');
+  playerscontainer.appendChild(player);
+
+  var nameandtotal = document.createElement('div');
+  nameandtotal.classList.add('nameandtotal');
+
+  var playername = document.createElement('input');
+  playername.classList.add('playername');
+  playername.type = 'text';
+  playername.id = 'playername' + playerNumber;
+
+  var totalall = document.createElement('div');
+  totalall.classList.add('totalall');
+
+  var totalhardcode = document.createElement('div');
+  totalhardcode.classList.add('totalhardcode');
+  totalhardcode.textContent = 'total:';
+
+  var totalnumber = document.createElement('div');
+  totalnumber.classList.add('totalnumber');
+  totalnumber.id = 'totalnumber' + playerNumber;
+
+  totalall.appendChild(totalhardcode);
+  totalall.appendChild(totalnumber);
+  nameandtotal.appendChild(playername);
+  nameandtotal.appendChild(totalall);
+  player.appendChild(nameandtotal);
+
+  var input = document.createElement('div');
+  input.classList.add('input');
+  player.appendChild(input);
+
+  var bidall = document.createElement('div');
+  bidall.classList.add('bidall');
+  input.appendChild(bidall);
+
+  var bidhardcode = document.createElement('div');
+  bidhardcode.classList.add('bidhardcode');
+  bidhardcode.textContent = 'Bid:';
+  bidall.appendChild(bidhardcode);
+
+  var bidinput = document.createElement('input');
+  bidinput.classList.add('bidinput');
+  bidinput.type = 'text';
+  bidinput.id = 'bidinput' + playerNumber;
+  bidall.appendChild(bidinput);
+
+  var gotall = document.createElement('div');
+  gotall.classList.add('gotall');
+  input.appendChild(gotall);
+
+  var gothardcode = document.createElement('div');
+  gothardcode.classList.add('gothardcode');
+  gothardcode.textContent = 'Got:';
+  gotall.appendChild(gothardcode);
+
+  var gotinput = document.createElement('input');
+  gotinput.classList.add('gotinput');
+  gotinput.type = 'text';
+  gotinput.id = 'gotinput' + playerNumber;
+  gotall.appendChild(gotinput);
+
+  var scoreall = document.createElement('div');
+  scoreall.classList.add('scoreall');
+  input.appendChild(scoreall);
+
+  var score = document.createElement('div');
+  score.classList.add('score');
+  score.textContent = 'Score:';
+  scoreall.appendChild(score);
+
+  var scorenumber = document.createElement('div');
+  scorenumber.classList.add('scorenumber');
+  scorenumber.id = 'scorenumber' + playerNumber;
+  scorenumber.textContent = '-';
+  scoreall.appendChild(scorenumber);
+
+  document.querySelector('#gotinput' + playerNumber).addEventListener('blur', updateTotalScore);
+  document.querySelector('#scorenumber' + playerNumber).addEventListener('change', updateTotalScore);
+  document.querySelector('#bidinput' + playerNumber).addEventListener('blur', updateRoundScore);
+  document.querySelector('#gotinput' + playerNumber).addEventListener('blur', updateRoundScore);
+}
+
+document.querySelector('#addplayerbutton').addEventListener('click', addPlayer);
+document.querySelector('#removeplayerbutton').addEventListener('click', removePlayer);
+

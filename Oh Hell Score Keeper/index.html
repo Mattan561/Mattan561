@@ -12,7 +12,7 @@
    
     <div class="everything">
      
-    <div class="header">
+        <div class="header">
         <button id="sidebarbutton"><i id="sidebaricon" class="fa fa-bars"></i></button>
         <h1 class="title">OH HELL</h1>
         </div>
@@ -22,15 +22,15 @@
             <div id="roundnumber">1</div>
             <button class="rightarrow">right arrow</button>
         </div>
-        <div class="players">
+        <div id="playerscontainer" class="players">
             <div class="player">
                 <div class="nameandtotal">
-                    <input id="playername1" type="text">
-                    <div id="totalall1">
+                    <input id="playername1" class="playername" type="text">
+                    <div id="totalall1" class="totalall">
                         <div class="totalhardcode">
                             total:
                         </div>
-                        <div id="totalnumber1">
+                        <div id="totalnumber1" class="totalnumber">
                             
                         </div>
                     </div>
@@ -41,19 +41,19 @@
                         <div class="bidhardcode">
                             Bid:
                         </div>
-                        <input id="bidinput1" type="text" value="">
+                        <input id="bidinput1" class="bidinput" type="text" value="">
                     </div>
                     <div class="gotall">
                         <div class="gothardcode">
                             Got:
                         </div>
-                        <input id="gotinput1" type="text" value="">
+                        <input id="gotinput1" class="gotinput" type="text" value="">
                     </div>
                     <div class="scoreall">
                         <div class="score">
                             Score: 
                         </div>
-                        <div id="scorenumber1">
+                        <div id="scorenumber1" class="scorenumber">
                             -
                             </div>
                         </div>
@@ -61,47 +61,15 @@
                 <!-- bid, got, score, -->
             </div>
             
+         
             
-            
-            <div class="player">
-                <div class="nameandtotal">
-                    <input id="playername2" type="text">
-                    <div id="totalall2">
-                    <div class="totalhardcode">
-                        total: 
-                    </div>
-                    <div id="totalnumber2">
-                    </div>
-                    </div>
-                </div>
-                <!--player-name, total, ranking-->
-                <div class="input">
-                    <div class="bidall">
-                        <div class="bidhardcode">
-                            Bid:
-                        </div>
-                        <input id="bidinput2" type="text" value="">
-                    </div>
-                    <div class="gotall">
-                        <div class="gothardcode">
-                            Got:
-                        </div>
-                        <input id="gotinput2" type="text" value="">
-                    </div>
-                    <div class="scoreall">
-                    <div class="score">
-                        Score: 
-                    </div>
-                    <div id="scorenumber2">
-                        -
-                        </div>
-                    </div>
-                </div>
-                <!-- bid, got, score, -->
-            </div>
+
             
             
         </div>
+        <button id="addplayerbutton" class="addremoveplayer">+ Add Player</button>
+        <button id="removeplayerbutton" class="addremoveplayer">- Remove Player</button>
+        
     </div>
     <script src="main.js"></script>
 </body>

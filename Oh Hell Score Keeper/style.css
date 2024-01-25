@@ -20,15 +20,7 @@
   width: 25%;
 }
 
-#playername1 {
-  margin: 0px 0px 2.5% 0px;
-  font-size: 3.5vw;
-  background-color: #8e2b21;
-  height: 58%;
-  border: 0px;
-  width: 99%;
-}
-#playername2 {
+.playername {
   margin: 0px 0px 2.5% 0px;
   font-size: 3.5vw;
   background-color: #8e2b21;
@@ -42,27 +34,13 @@
   display: flex;
 }
 
-#totalnumber1 {
+.totalnumber {
   display: flex;
   align-self: center;
   margin-left: 10%;
 }
 
-#totalnumber2 {
-  display: flex;
-  align-self: center;
-  margin-left: 10%;
-}
-
-#totalall1{
-  font-size: 3vw;
-  background-color: #cc5728;
-  height: 34.75%;
-  width: 100%;
-  display: flex;
-}
-
-#totalall2{
+.totalall{
   font-size: 3vw;
   background-color: #cc5728;
   height: 34.75%;
@@ -183,25 +161,13 @@ display:flex;
   align-self: center; /* Center vertically */
   width: 25%;
 }
-#bidinput1{
+.bidinput{
   background: none;
   border: 0px;
   font-size: 2.5vw;
   margin-left: 5%;
 }
-#gotinput1{
-  background: none;
-  border: 0px;
-  font-size: 2.5vw;
-  margin-left: 4%;
-}
-#bidinput2{
-  background: none;
-  border: 0px;
-  font-size: 2.5vw;
-  margin-left: 5%;
-}
-#gotinput2{
+.gotinput{
   background: none;
   border: 0px;
   font-size: 2.5vw;
@@ -216,17 +182,33 @@ display:flex;
   display:flex;
   align-self: center; 
 }
-#scorenumber2{
+
+.scorenumber{
   margin-left: 20%;
 }
-#scorenumber1{
-  margin-left: 20%;
-}
+
 
 #roundhardcode,
 #roundnumber {
   display: inline;
 }
+
+.addremoveplayer{
+  font-size: 2vw;
+  background-color: #ffec3c;
+  border: 0px;
+  margin: 0px 0px 1% 0px;
+  width: 100%;
+  height: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+
+
+
+
 
 .color1 {color: #5a131b;}
 .color2 {color: #8e2b21;}
