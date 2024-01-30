@@ -11,9 +11,18 @@ function getScore1(bid1, got1) {
   return score1;
 }
 
-var numberOfPlayers = 2;
-var numberOfRounds = 20;
+var numberOfPlayers = 1;
+var numberOfRounds = calculateNumberOfRounds();
 let roundInputs1 = [];
+
+function calculateNumberOfRounds(numberOfPlayers) {
+  return Math.floor(51 / (numberOfPlayers));
+}
+
+function updateNumberOfRounds(playerNumber) {
+  numberOfRounds = calculateNumberOfRounds(playerNumber);
+  document.querySelector('#roundtotal').textContent = numberOfRounds;
+}
 
 
 /*
@@ -120,25 +129,24 @@ function initializePlayerName() {
 
 document.addEventListener('DOMContentLoaded', initializePlayerName);
 
-
-function addPlayer() {
-  if (numberOfPlayers < 12) {
-    addPlayer(++numberOfPlayers);
-  }
-}
-
 function removePlayer(){
   var playersContainer = document.querySelector('#playerscontainer');
   var players = document.querySelectorAll('.player');
   var lastPlayer = players[players.length - 1];
   playersContainer.removeChild(lastPlayer);
+  numberOfPlayers--;
+  updateNumberOfRounds(numberOfPlayers);
 }
 
-function addPlayer(playerNumber) {
+function addPlayer(event) {
+  if (numberOfPlayers >= 12)
+    return;
+  var playerNumber = numberOfPlayers++;
   var playerscontainer = document.querySelector('#playerscontainer');
   var player = document.createElement('div');
   player.classList.add('player');
   playerscontainer.appendChild(player);
+  updateNumberOfRounds(numberOfPlayers);
 
   var nameandtotal = document.createElement('div');
   nameandtotal.classList.add('nameandtotal');

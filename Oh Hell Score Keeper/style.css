@@ -188,8 +188,8 @@ display:flex;
 }
 
 
-#roundhardcode,
-#roundnumber {
+.roundhardcode,
+.roundinfo {
   display: inline;
 }
 
