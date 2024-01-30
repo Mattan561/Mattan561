@@ -16,7 +16,7 @@ var numberOfRounds = calculateNumberOfRounds();
 let roundInputs1 = [];
 
 function calculateNumberOfRounds(numberOfPlayers) {
-  return Math.floor(51 / (numberOfPlayers));
+  return (Math.floor(51 / (numberOfPlayers))*2)-1;
 }
 
 function updateNumberOfRounds(playerNumber) {
