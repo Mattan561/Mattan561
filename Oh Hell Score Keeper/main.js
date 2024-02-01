@@ -231,3 +231,30 @@ function addPlayer(event) {
 document.querySelector('#addplayerbutton').addEventListener('click', addPlayer);
 document.querySelector('#removeplayerbutton').addEventListener('click', removePlayer);
 
+
+
+
+
+
+const nav = document.querySelector(".nav-container");
+const everything = document.querySelector(".everything");
+const body = document.querySelector("body");
+
+if (nav) {
+  const toggle = nav.querySelector(".nav-toggle");
+  
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      if (nav.classList.contains("is-active")) {
+        nav.classList.remove("is-active");
+      }
+      else {
+        nav.classList.add("is-active");
+      }
+    });
+    
+    everything.addEventListener("focusin", () => {
+      nav.classList.remove("is-active");
+    });
+  }
+}
