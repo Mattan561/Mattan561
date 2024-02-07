@@ -48,9 +48,6 @@
   display: flex;
 }
 
-#sidebarbutton{
-  align-self: center;
-}
 
 .title {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -76,6 +73,7 @@
   margin: 0px 0px 1% 0px;
   flex-shrink: 0; /* Prevent shrinking based on content */
   height: 50%; /* Adjust the height as needed */
+  align-self: center;
 }
 
 body {
@@ -188,13 +186,13 @@ display:flex;
   font-size: 2vw;
   background-color: #ffec3c;
   border: 0px;
-  margin: 0px 0px 1% 0px;
-  width: 100%;
-  height: 10%;
+  width: 5%;
+  height: 5%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   text-align: center;
   position: relative;
+  align-self: center;
 }
 
 

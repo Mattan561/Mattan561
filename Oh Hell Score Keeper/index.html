@@ -7,20 +7,13 @@
     <title>Oh Hell Scorekeeper</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="sidebar.css">
 </head>
-<div class="nav-container" tabindex="0">
-    <div class="nav-toggle" id="sidebarbutton"></div>
-  
-    <nav class="nav-items">
-      <a class="nav-item" href="#">Яблоко</a>
-      <a class="nav-item" href="#">Вишня</a>
-      <a class="nav-item" href="#">Арбуз</a>
-    </nav>
-  </div>
+<body>
     <div class="everything" tabindex="0">
         <div class="header">
+        <button id="addplayerbutton" class="addremoveplayer">+</button>
         <h1 class="title">OH HELL</h1>
+        <button id="removeplayerbutton" class="addremoveplayer">-</button>
         </div>
         <div class="round" >
             <button class="leftarrow">left arrow</button>
@@ -75,8 +68,7 @@
             
             
         </div>
-        <button id="addplayerbutton" class="addremoveplayer">+ Add Player</button>
-        <button id="removeplayerbutton" class="addremoveplayer">- Remove Player</button>
+
         
     </div>
     <script src="main.js"></script>
